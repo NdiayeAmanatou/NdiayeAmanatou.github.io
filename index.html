@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaye Amanatou NDIAYE — Data Scientist & ML Engineer</title>
+  <meta name="description" content="Portfolio de Yaye Amanatou NDIAYE — Data Analyst, Data Scientist junior et ML Engineer basée à Dakar, Sénégal." />
+  <meta name="author" content="Yaye Amanatou NDIAYE" />
+  <meta name="theme-color" content="#07060f" />
+
+  <!-- Open Graph (aperçu quand on partage le lien) -->
+  <meta property="og:title" content="Yaye Amanatou NDIAYE — Data Scientist & ML Engineer" />
+  <meta property="og:description" content="IA, Data Science & Machine Learning — Dakar, Sénégal." />
+  <meta property="og:image" content="assets/photo.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%237c3aed'/><stop offset='.5' stop-color='%23ec4899'/><stop offset='1' stop-color='%23f97316'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='white'>AN</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Effets d'arrière-plan -->
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+  <canvas id="neural" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo" aria-label="Accueil">
+      <span class="logo-mark">AN</span>
+      <span class="logo-text">Amanatou<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-i18n="nav.about">À propos</a>
+      <a href="#skills" data-i18n="nav.skills">Compétences</a>
+      <a href="#projects" data-i18n="nav.projects">Projets</a>
+      <a href="#journey" data-i18n="nav.journey">Parcours</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn lang-btn" id="langBtn" aria-label="Changer de langue / Switch language">EN</button>
+      <button class="icon-btn" id="themeBtn" aria-label="Changer de thème">
+        <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M1.5 12H4M20 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="kicker reveal"><span class="wave">👋</span> <span data-i18n="hero.hello">Bonjour, je suis</span></p>
+        <h1 class="hero-name reveal">
+          <span class="line">Yaye Amanatou</span>
+          <span class="line gradient-text glitch" data-text="NDIAYE">NDIAYE</span>
+        </h1>
+        <p class="hero-role reveal">
+          <span class="mono">&gt;</span> <span id="typed"></span><span class="caret">|</span>
+        </p>
+        <p class="hero-tagline reveal" data-i18n="hero.tagline">
+          Je transforme les données en décisions et les idées en solutions d'IA à impact — avec une ambition : faire rayonner l'innovation numérique en Afrique.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn btn-primary magnetic"><span data-i18n="hero.cta1">Voir mes projets</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="assets/CV_Yaye_Amanatou_NDIAYE.pdf" class="btn btn-ghost magnetic" download><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>
+            <span data-i18n="hero.cta2">Télécharger mon CV</span></a>
+        </div>
+        <div class="hero-meta reveal">
+          <span class="chip"><span class="pulse"></span><span data-i18n="hero.available">Ouverte aux opportunités</span></span>
+          <span class="chip">📍 Dakar, Sénégal</span>
+          <div class="socials">
+            <a href="https://github.com/NdiayeAmanatou" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" class="fill"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+            <a href="https://www.linkedin.com/in/yaye-amanatou-ndiaye-6702b0337/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" class="fill"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+            <a href="mailto:amma03.ndiaye@gmail.com" aria-label="E-mail"><svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3 6 9 7 9-7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="portrait tilt">
+          <div class="ring"></div>
+          <img src="assets/photo.jpg" alt="Portrait de Yaye Amanatou NDIAYE" width="720" height="900" />
+          <div class="float-badge b1"><span>🤖</span> IA & LLM</div>
+          <div class="float-badge b2"><span>📊</span> Data Science</div>
+          <div class="float-badge b3"><span>🧠</span> Machine Learning</div>
+          <div class="code-card">
+            <span class="c-k">model</span>.<span class="c-f">fit</span>(<span class="c-s">data</span>)<br/>
+            <span class="c-c"># → impact 🌍</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Défiler"><span></span></a>
+    </section>
+
+    <!-- Bandeau défilant -->
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <span class="section-num">01</span>
+        <h2 data-i18n="about.title">À propos de moi</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass reveal">
+          <p class="about-hi">Hi there! 👋</p>
+          <p data-i18n-html="about.p1">Je suis <strong>Amanatou Ndiaye</strong>, diplômée d'une <strong>Licence en Ingénierie Informatique</strong> de l'Université Assane Seck de Ziguinchor (UASZ). Actuellement, je poursuis une formation en <strong>Intelligence Artificielle</strong> à la <strong>Sonatel Academy – École du Code d'Orange Digital Center</strong>.</p>
+          <p data-i18n-html="about.p2">Passionnée par le numérique, l'innovation et les nouvelles technologies, je m'intéresse particulièrement à l'<span class="hl">Intelligence Artificielle</span>, à la <span class="hl">Data Science</span> et au développement de solutions technologiques. Curieuse et animée par l'envie d'apprendre, j'aime relever des défis, explorer de nouvelles idées et transformer les connaissances en solutions concrètes à impact positif.</p>
+          <p data-i18n-html="about.p3">Mon ambition est de contribuer à un écosystème numérique <strong>innovant, inclusif et porteur de changement</strong>, particulièrement en Afrique. 🌍</p>
+          <div class="langs">
+            <span class="chip">🇫🇷 <span data-i18n="about.fr">Français — courant</span></span>
+            <span class="chip">🇬🇧 <span data-i18n="about.en">Anglais — intermédiaire</span></span>
+            <span class="chip">🇸🇳 <span data-i18n="about.wo">Wolof — langue maternelle</span></span>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat glass reveal"><span class="stat-num" data-count="14">0</span><span class="stat-plus">+</span><span class="stat-label" data-i18n="about.s1">Projets publiés</span></div>
+          <div class="stat glass reveal"><span class="stat-num" data-count="40">0</span><span class="stat-plus">+</span><span class="stat-label" data-i18n="about.s2">Technologies</span></div>
+          <div class="stat glass reveal"><span class="stat-num" data-count="4">0</span><span class="stat-label" data-i18n="about.s3">Domaines d'expertise</span></div>
+          <div class="stat glass reveal"><span class="stat-num">∞</span><span class="stat-label" data-i18n="about.s4">Curiosité</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section" id="skills">
+      <div class="section-head reveal">
+        <span class="section-num">02</span>
+        <h2 data-i18n="skills.title">Compétences</h2>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <span class="section-num">03</span>
+        <h2 data-i18n="projects.title">Projets</h2>
+      </div>
+      <p class="section-sub reveal" data-i18n="projects.sub">Une sélection de mes travaux en IA, Machine Learning, Data et développement. Filtre par domaine 👇</p>
+      <div class="filters reveal" id="filters" role="tablist"></div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <!-- ========== JOURNEY ========== -->
+    <section class="section" id="journey">
+      <div class="section-head reveal">
+        <span class="section-num">04</span>
+        <h2 data-i18n="journey.title">Parcours</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-head"><span class="tl-badge live" data-i18n="journey.now">En cours</span><span class="tl-date" data-i18n="journey.j1.date">Depuis juil. 2026</span></div>
+            <h3 data-i18n="journey.j1.title">CPS — Certificat de spécialisation Référent IA</h3>
+            <p class="tl-org">Sonatel Academy — École du Code · Orange Digital Center, Dakar</p>
+            <p data-i18n="journey.j1.desc">Parcours intensif orienté projets : préparation de données (tabulaires, images, textes), Machine Learning, Deep Learning, LLM, RAG et prompt engineering.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-head"><span class="tl-badge" data-i18n="journey.challenge">🏆 Challenge</span><span class="tl-date">2026</span></div>
+            <h3 data-i18n="journey.j5.title">PAS Challenge SALSTIS 2026 — Innovation numérique</h3>
+            <p class="tl-org" data-i18n="journey.j5.org">JOJ Dakar 2026 · Accueil & mobilité des spectateurs</p>
+            <p data-i18n="journey.j5.desc">Conception d'une solution combinant une application mobile intuitive et des bornes interactives multilingues enrichies par l'IA, pour améliorer l'information en temps réel, la fluidité des déplacements, la sécurité et le confort des spectateurs.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-head"><span class="tl-badge" data-i18n="journey.exp">💼 Expérience</span><span class="tl-date" data-i18n="journey.j4.date">Mai — août 2026</span></div>
+            <h3 data-i18n="journey.j4.title">Stagiaire en gestion de caisse</h3>
+            <p class="tl-org">KAY YIWU SHOP · Dakar, Golf Sud</p>
+            <p data-i18n="journey.j4.desc">Encaissements et moyens de paiement, suivi des ventes sur logiciel de gestion, participation aux inventaires, ouverture et clôture de caisse, relation client et gestion des réclamations.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-head"><span class="tl-badge" data-i18n="journey.done">🎓 Diplômée</span><span class="tl-date">2022 — 2026</span></div>
+            <h3 data-i18n="journey.j2.title">Licence en Ingénierie Informatique</h3>
+            <p class="tl-org">Université Assane Seck de Ziguinchor (UASZ)</p>
+            <p data-i18n="journey.j2.desc">Algorithmique, programmation (Java, Python, C), bases de données, développement web, réseaux et sécurité (supervision Nagios / SNMP, serveur web HTTPS), architecture N-Tiers et génie logiciel.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-head"><span class="tl-badge">🎓 Bac</span><span class="tl-date">2021 — 2022</span></div>
+            <h3 data-i18n="journey.j3.title">Baccalauréat Sciences expérimentales (S2)</h3>
+            <p class="tl-org">Lycée des jeunes filles Ameth FALL · Saint-Louis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section" id="contact">
+      <div class="contact-wrap glass reveal">
+        <div class="contact-text">
+          <span class="section-num">05</span>
+          <h2 class="contact-title" data-i18n-html="contact.title">Construisons quelque chose <span class="gradient-text">d'incroyable</span> ensemble.</h2>
+          <p data-i18n="contact.sub">Stage, opportunité, collaboration ou simple échange autour de la data et de l'IA : ma boîte mail est toujours ouverte.</p>
+          <div class="contact-links">
+            <button class="contact-link" id="copyMail" type="button">
+              <svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+              <span>amma03.ndiaye@gmail.com</span>
+              <em class="copy-hint" data-i18n="contact.copy">Copier</em>
+            </button>
+            <a class="contact-link" href="https://www.linkedin.com/in/yaye-amanatou-ndiaye-6702b0337/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" class="fill"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a class="contact-link" href="https://github.com/NdiayeAmanatou" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" class="fill"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <label><span data-i18n="contact.name">Votre nom</span><input name="name" required autocomplete="name" /></label>
+          <label><span data-i18n="contact.subject">Sujet</span><input name="subject" required /></label>
+          <label><span data-i18n="contact.message">Message</span><textarea name="message" rows="5" required></textarea></label>
+          <button class="btn btn-primary magnetic" type="submit"><span data-i18n="contact.send">Envoyer</span>
+            <svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Yaye Amanatou NDIAYE · <span data-i18n="footer.made">Conçu avec passion à Dakar</span> 🇸🇳</p>
+    <a href="#home" class="to-top" aria-label="Haut de page"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
