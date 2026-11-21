@@ -1,312 +1,256 @@
 /* =========================================================
    Portfolio — Yaye Amanatou NDIAYE
    ---------------------------------------------------------
-   👉 Pour modifier tes projets ou compétences, édite
-      simplement les tableaux PROJECTS et SKILLS ci-dessous.
+   👉 Pour modifier le contenu, édite les tableaux ci-dessous :
+      SKILLS, PROJECTS, SERVICES, STEPS, JOURNEY, TRAITS, I18N
    ========================================================= */
 
 const GH = "https://github.com/NdiayeAmanatou/";
+const EMAIL = "amma03.ndiaye@gmail.com";
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/";
 const icon = (name, variant = "original") => `${DEVICON}${name}/${name}-${variant}.svg`;
 
+const COL = { red: "var(--red)", green: "var(--green)", saffron: "var(--saffron)", cobalt: "var(--cobalt)", ink: "var(--ink)" };
+
 /* ---------- Compétences ---------- */
 const SKILLS = [
-  {
-    emo: "💻", color: "#8b5cf6", title: { fr: "Langages", en: "Languages" },
-    items: [
-      { n: "Python", i: icon("python") },
-      { n: "Java", i: icon("java") },
-      { n: "C", i: icon("c") },
-      { n: "JavaScript", i: icon("javascript") },
-      { n: "SQL / MySQL", i: icon("mysql") },
-      { n: "HTML5", i: icon("html5") },
-      { n: "CSS3", i: icon("css3") },
-    ],
-  },
-  {
-    emo: "📊", color: "#22d3ee", title: { fr: "Data Science & Visualisation", en: "Data Science & Visualization" },
-    items: [
-      { n: "NumPy", i: icon("numpy") },
-      { n: "Pandas", i: icon("pandas") },
-      { n: "Matplotlib", i: icon("matplotlib") },
-      { n: "Seaborn", e: "🌊" },
-      { n: "Jupyter", i: icon("jupyter") },
-      { n: "BeautifulSoup", e: "🍲" },
-      { n: "Excel (TCD)", e: "📗" },
-      { n: "Data Cleaning", e: "🧹" },
-    ],
-  },
-  {
-    emo: "🧠", color: "#ec4899", title: { fr: "Machine & Deep Learning", en: "Machine & Deep Learning" },
-    items: [
-      { n: "scikit-learn", i: icon("scikitlearn") },
-      { n: "TensorFlow", i: icon("tensorflow") },
-      { n: "Keras", i: icon("keras") },
-      { n: "NLP / TF-IDF", e: "🔤" },
-      { n: "Computer Vision", e: "🖼️" },
-      { n: "Feature Engineering", e: "⚙️" },
-    ],
-  },
-  {
-    emo: "🤖", color: "#f97316", title: { fr: "IA Générative & LLM", en: "Generative AI & LLM" },
-    items: [
-      { n: "LLM", e: "✨" },
-      { n: "RAG", e: "🔎" },
-      { n: "Prompt Engineering", e: "💬" },
-      { n: "Embeddings", e: "🧬" },
-      { n: "ChromaDB", e: "🗄️" },
-    ],
-  },
-  {
-    emo: "🌐", color: "#a78bfa", title: { fr: "Développement Web & Back-end", en: "Web & Back-end Development" },
-    items: [
-      { n: "React", i: icon("react") },
-      { n: "Bootstrap", i: icon("bootstrap") },
-      { n: "Spring Boot", i: icon("spring") },
-      { n: "JSP", e: "☕" },
-      { n: "Maven", i: icon("maven") },
-      { n: "Apache2", i: icon("apache") },
-    ],
-  },
-  {
-    emo: "🛠️", color: "#34d399", title: { fr: "Outils, Cloud & Sécurité", en: "Tools, Cloud & Security" },
-    items: [
-      { n: "Git", i: icon("git") },
-      { n: "GitHub", e: "🐙" },
-      { n: "Linux", i: icon("linux") },
-      { n: "Docker", i: icon("docker") },
-      { n: "AWS", e: "☁️" },
-      { n: "Wireshark", e: "🦈" },
-      { n: "OpenSSL", e: "🔐" },
-      { n: "Nagios / SNMP", e: "📡" },
-      { n: "Agile / Scrum", e: "🔄" },
-      { n: "VS Code", i: icon("vscode") },
-      { n: "IntelliJ", i: icon("intellij") },
-    ],
-  },
+  { color: COL.red, title: { fr: "Langages", en: "Languages" }, items: [
+    { n: "Python", i: icon("python") }, { n: "Java", i: icon("java") }, { n: "C", i: icon("c") },
+    { n: "JavaScript", i: icon("javascript") }, { n: "SQL / MySQL", i: icon("mysql") },
+    { n: "HTML5", i: icon("html5") }, { n: "CSS3", i: icon("css3") } ] },
+  { color: COL.saffron, title: { fr: "Data & Visualisation", en: "Data & Visualization" }, items: [
+    { n: "NumPy", i: icon("numpy") }, { n: "Pandas", i: icon("pandas") }, { n: "Matplotlib", i: icon("matplotlib") },
+    { n: "Seaborn", e: "🌊" }, { n: "Jupyter", i: icon("jupyter") }, { n: "BeautifulSoup", e: "🍲" },
+    { n: "Excel (TCD)", e: "📗" }, { n: "Data Cleaning", e: "🧹" } ] },
+  { color: COL.green, title: { fr: "Machine & Deep Learning", en: "Machine & Deep Learning" }, items: [
+    { n: "scikit-learn", i: icon("scikitlearn") }, { n: "TensorFlow", i: icon("tensorflow") }, { n: "Keras", i: icon("keras") },
+    { n: "NLP / TF-IDF", e: "🔤" }, { n: "Computer Vision", e: "🖼️" }, { n: "Feature Engineering", e: "⚙️" } ] },
+  { color: COL.red, title: { fr: "IA générative & LLM", en: "Generative AI & LLM" }, items: [
+    { n: "LLM", e: "✨" }, { n: "RAG", e: "🔎" }, { n: "Prompt Engineering", e: "💬" },
+    { n: "Embeddings", e: "🧬" }, { n: "ChromaDB", e: "🗄️" } ] },
+  { color: COL.cobalt, title: { fr: "Web & Back-end", en: "Web & Back-end" }, items: [
+    { n: "React", i: icon("react") }, { n: "Bootstrap", i: icon("bootstrap") }, { n: "Spring Boot", i: icon("spring") },
+    { n: "JSP", e: "☕" }, { n: "Maven", i: icon("maven") }, { n: "Apache2", i: icon("apache") } ] },
+  { color: COL.ink, title: { fr: "Outils, Cloud & Sécurité", en: "Tools, Cloud & Security" }, items: [
+    { n: "Git", i: icon("git") }, { n: "GitHub", e: "🐙" }, { n: "Linux", i: icon("linux") }, { n: "Docker", i: icon("docker") },
+    { n: "AWS", e: "☁️" }, { n: "Wireshark", e: "🦈" }, { n: "OpenSSL", e: "🔐" }, { n: "Nagios / SNMP", e: "📡" },
+    { n: "Agile / Scrum", e: "🔄" }, { n: "VS Code", i: icon("vscode") }, { n: "IntelliJ", i: icon("intellij") } ] },
+];
+
+/* ---------- Expertise ---------- */
+const SERVICES = [
+  { c: "#e8442c", t: { fr: "Analyse & <em>visualisation</em> de données", en: "Data analysis & <em>visualization</em>" },
+    d: { fr: "Nettoyer, explorer et faire parler les données : indicateurs clairs, graphiques lisibles et conclusions utiles à la décision.",
+         en: "Cleaning, exploring and giving data a voice: clear metrics, readable charts and decision-ready insights." },
+    tags: ["Pandas", "NumPy", "Seaborn", "Matplotlib", "Excel"] },
+  { c: "#0f7a4f", t: { fr: "Machine & <em>Deep Learning</em>", en: "Machine & <em>Deep Learning</em>" },
+    d: { fr: "Modèles de classification et de régression, réseaux de neurones, évaluation rigoureuse et sauvegarde des modèles.",
+         en: "Classification and regression models, neural networks, rigorous evaluation and model persistence." },
+    tags: ["scikit-learn", "TensorFlow", "Keras", "NLP"] },
+  { c: "#2f55d4", t: { fr: "IA générative & <em>LLM</em>", en: "Generative AI & <em>LLMs</em>" },
+    d: { fr: "Pipelines RAG, embeddings, bases vectorielles et prompt engineering pour concevoir des assistants fiables.",
+         en: "RAG pipelines, embeddings, vector databases and prompt engineering to build reliable assistants." },
+    tags: ["RAG", "ChromaDB", "Embeddings", "Prompting"] },
+  { c: "#c98a00", t: { fr: "Développement <em>web & back-end</em>", en: "Web & <em>back-end</em> development" },
+    d: { fr: "Interfaces responsives et API REST, de la maquette au déploiement dans le cloud.",
+         en: "Responsive interfaces and REST APIs, from mock-up to cloud deployment." },
+    tags: ["React", "JavaScript", "Spring Boot", "AWS"] },
+];
+
+const STEPS = [
+  { c: COL.red, ic: "🎯", t: { fr: "Comprendre", en: "Understand" }, d: { fr: "Cerner le besoin métier et poser les bonnes questions.", en: "Frame the business need and ask the right questions." } },
+  { c: COL.saffron, ic: "🧹", t: { fr: "Préparer", en: "Prepare" }, d: { fr: "Collecter, nettoyer et structurer des données fiables.", en: "Collect, clean and structure reliable data." } },
+  { c: COL.green, ic: "🧠", t: { fr: "Modéliser", en: "Model" }, d: { fr: "Explorer, entraîner, évaluer… puis itérer.", en: "Explore, train, evaluate… then iterate." } },
+  { c: COL.cobalt, ic: "🚀", t: { fr: "Livrer", en: "Deliver" }, d: { fr: "Déployer, visualiser et expliquer les résultats.", en: "Deploy, visualize and explain the results." } },
+];
+
+const TRAITS = {
+  fr: ["Rigueur & organisation", "Autonomie", "Esprit d'équipe", "Adaptabilité", "Esprit d'analyse", "Curiosité", "Sens des responsabilités"],
+  en: ["Rigor & organization", "Autonomy", "Team spirit", "Adaptability", "Analytical mind", "Curiosity", "Sense of responsibility"],
+};
+
+/* ---------- Parcours ---------- */
+const JOURNEY = [
+  { c: COL.red, live: true, date: { fr: "Juil. 2026 → auj.", en: "Jul. 2026 → now" },
+    t: { fr: "CPS — Certificat de spécialisation Référent IA", en: "CPS — AI Referent Specialization Certificate" },
+    o: "Sonatel Academy · Orange Digital Center, Dakar",
+    d: { fr: "Formation intensive par projets : préparation de données (tabulaires, images, textes), Machine Learning, Deep Learning, LLM, RAG et prompt engineering.",
+         en: "Intensive project-based training: data preparation (tabular, images, text), Machine Learning, Deep Learning, LLMs, RAG and prompt engineering." } },
+  { c: COL.saffron, badge: { fr: "🏆 Challenge", en: "🏆 Challenge" }, date: { fr: "2026", en: "2026" },
+    t: { fr: "PAS Challenge SALSTIS 2026", en: "PAS Challenge SALSTIS 2026" },
+    o: { fr: "JOJ Dakar 2026 — accueil & mobilité des spectateurs", en: "Dakar 2026 Youth Olympic Games — spectator welcome & mobility" },
+    d: { fr: "Proposition d'une application mobile et de bornes interactives multilingues dopées à l'IA pour informer en temps réel, fluidifier les déplacements et renforcer la sécurité des spectateurs.",
+         en: "Proposed a mobile app and AI-powered multilingual kiosks to deliver real-time information, smoother crowd flow and better spectator safety." } },
+  { c: COL.cobalt, badge: { fr: "💼 Expérience", en: "💼 Experience" }, date: { fr: "Mai → Août 2026", en: "May → Aug. 2026" },
+    t: { fr: "Stagiaire en gestion de caisse", en: "Cashier Operations Intern" },
+    o: "KAY YIWU SHOP · Dakar, Golf Sud",
+    d: { fr: "Encaissements multi-moyens de paiement, suivi des ventes sur logiciel de gestion, inventaires, ouverture/clôture de caisse et relation client.",
+         en: "Multi-method payment processing, sales tracking in management software, inventories, register opening/closing and customer care." } },
+  { c: COL.green, badge: { fr: "🎓 Diplôme", en: "🎓 Degree" }, date: { fr: "2022 → 2026", en: "2022 → 2026" },
+    t: { fr: "Licence en Ingénierie Informatique", en: "Bachelor's in Computer Engineering" },
+    o: "Université Assane Seck de Ziguinchor (UASZ)",
+    d: { fr: "Algorithmique, Java, Python, C, bases de données, web, réseaux & sécurité (Nagios, SNMP, HTTPS), architecture N-Tiers et génie logiciel.",
+         en: "Algorithms, Java, Python, C, databases, web, networks & security (Nagios, SNMP, HTTPS), N-tier architecture and software engineering." } },
+  { c: COL.ink, badge: { fr: "🎓 Bac", en: "🎓 High school" }, date: { fr: "2021 → 2022", en: "2021 → 2022" },
+    t: { fr: "Baccalauréat scientifique (S2)", en: "Scientific Baccalaureate (S2)" },
+    o: "Lycée des jeunes filles Ameth Fall · Saint-Louis",
+    d: { fr: "Sciences expérimentales — le point de départ d'un goût prononcé pour la logique et la résolution de problèmes.",
+         en: "Experimental sciences — where my taste for logic and problem-solving began." } },
 ];
 
 /* ---------- Projets ---------- */
 const CATS = {
-  all:  { fr: "Tous", en: "All" },
-  ai:   { fr: "IA & LLM", en: "AI & LLM", color: "#f97316" },
-  ml:   { fr: "Machine Learning", en: "Machine Learning", color: "#ec4899" },
-  data: { fr: "Data & Visualisation", en: "Data & Visualization", color: "#22d3ee" },
-  dev:  { fr: "Dev & Cloud", en: "Dev & Cloud", color: "#8b5cf6" },
+  all:  { fr: "Tout", en: "All" },
+  ai:   { fr: "IA & LLM", en: "AI & LLM", color: "#e8442c" },
+  ml:   { fr: "Machine Learning", en: "Machine Learning", color: "#0f7a4f" },
+  data: { fr: "Data & Visualisation", en: "Data & Visualization", color: "#c98a00" },
+  dev:  { fr: "Dev & Cloud", en: "Dev & Cloud", color: "#2f55d4" },
 };
 
 const PROJECTS = [
-  {
-    cat: "ai", emo: "🛡️", featured: true, repo: "Atelier_pratique_LLM",
-    title: { fr: "Pipeline RAG — Assistant Cybersécurité", en: "RAG Pipeline — Cybersecurity Assistant" },
-    desc: {
-      fr: "Pipeline de Retrieval-Augmented Generation construit de bout en bout : ingestion de documents PDF de référence en cybersécurité, nettoyage du texte, découpage en chunks, génération d'embeddings et indexation dans une base vectorielle pour la recherche sémantique par un LLM.",
-      en: "End-to-end Retrieval-Augmented Generation pipeline: ingestion of reference cybersecurity PDF documents, text cleaning, chunking, embedding generation and indexing in a vector database for LLM-powered semantic search.",
-    },
-    hl: {
-      fr: ["Extraction et normalisation du texte de 5 PDF (pypdf, Unicode)", "Chunks de 1 500 caractères, 15 % de chevauchement — choix justifiés et documentés", "Base vectorielle ChromaDB prête à être interrogée"],
-      en: ["Text extraction & normalization from 5 PDFs (pypdf, Unicode)", "1,500-char chunks with 15% overlap — documented design choices", "ChromaDB vector store ready for querying"],
-    },
-    tags: ["Python", "LLM", "RAG", "Embeddings", "ChromaDB", "Pandas"],
-  },
-  {
-    cat: "ai", emo: "💼", featured: true, repo: "IA_business_assistant",
-    title: { fr: "AI Business Assistant — Prompt Engineering", en: "AI Business Assistant — Prompt Engineering" },
-    desc: {
-      fr: "Étude pratique du prompt engineering appliquée à un cas métier : l'analyse des retours clients. Conception de prompts structurés et comparaison rigoureuse des techniques de prompting sur une tâche de classification de sentiment.",
-      en: "Hands-on prompt engineering study applied to a real business case: customer feedback analysis. Design of structured prompts and rigorous comparison of prompting techniques on a sentiment classification task.",
-    },
-    hl: {
-      fr: ["Anatomie d'un prompt : rôle, tâche, contexte, contraintes, format", "Benchmark zero-shot vs one-shot vs few-shot sur des avis ambigus", "Sorties tabulaires directement exploitables par l'entreprise"],
-      en: ["Prompt anatomy: role, task, context, constraints, output format", "Zero-shot vs one-shot vs few-shot benchmark on ambiguous reviews", "Tabular outputs ready to be used by the business"],
-    },
-    tags: ["LLM", "Prompt Engineering", "NLP", "Sentiment Analysis"],
-  },
-  {
-    cat: "ml", emo: "⚡", repo: "atelier_tensorflow_1",
-    title: { fr: "Prédiction de consommation énergétique", en: "Energy Consumption Forecasting" },
-    desc: {
-      fr: "Réseau de neurones TensorFlow/Keras entraîné sur les mesures de capteurs IoT d'un bâtiment intelligent pour prédire la consommation d'énergie. Modèle exporté au format .keras.",
-      en: "TensorFlow/Keras neural network trained on smart-building IoT sensor data to predict energy consumption. Model exported in .keras format.",
-    },
-    tags: ["TensorFlow", "Keras", "Deep Learning", "Regression", "IoT"],
-  },
-  {
-    cat: "ml", emo: "📡", repo: "atelier_scikit_learn",
-    title: { fr: "Classification de l'état des capteurs IoT", en: "IoT Sensor State Classification" },
-    desc: {
-      fr: "Modèle K-Nearest Neighbors qui prédit l'état d'un capteur à partir de ses mesures : nettoyage, standardisation, split stratifié, évaluation (accuracy, matrice de confusion, rapport de classification) et sauvegarde du modèle.",
-      en: "K-Nearest Neighbors model predicting a sensor's state from its readings: cleaning, scaling, stratified split, evaluation (accuracy, confusion matrix, classification report) and model persistence.",
-    },
-    tags: ["scikit-learn", "KNN", "StandardScaler", "joblib"],
-  },
-  {
-    cat: "data", emo: "🏢", repo: "atelier_preparation_donnees",
-    title: { fr: "Préparation de données tabulaires — Smart Building", en: "Tabular Data Preparation — Smart Building" },
-    desc: {
-      fr: "Transformation d'un jeu de données brut de bâtiment intelligent en dataset prêt pour le ML : valeurs manquantes, doublons, encodage One-Hot, standardisation et Pipeline scikit-learn, avec une cible de détection d'alertes.",
-      en: "Turning a raw smart-building dataset into an ML-ready one: missing values, duplicates, one-hot encoding, scaling and a scikit-learn Pipeline, targeting alert detection.",
-    },
-    tags: ["Pandas", "scikit-learn", "Pipeline", "OneHotEncoder"],
-  },
-  {
-    cat: "data", emo: "🖼️", repo: "Atelier_prepa_donnees_images",
-    title: { fr: "Préparation de données images", en: "Image Data Preparation" },
-    desc: {
-      fr: "Chaîne de préparation d'un dataset d'images pour la vision par ordinateur : nettoyage, redimensionnement (PIL), augmentation de données et découpage train / validation / test.",
-      en: "Image dataset preparation pipeline for computer vision: cleaning, resizing (PIL), data augmentation and train / validation / test splitting.",
-    },
-    tags: ["PIL", "NumPy", "Data Augmentation", "Computer Vision"],
-  },
-  {
-    cat: "data", emo: "💬", repo: "Atelier_prepa_donnees_textuelles",
-    title: { fr: "Préparation de données textuelles — Avis clients", en: "Text Data Preparation — Customer Reviews" },
-    desc: {
-      fr: "Traitement NLP d'avis clients : nettoyage, suppression des stopwords, lemmatisation, vectorisation TF-IDF et split stratifié pour l'analyse de sentiment.",
-      en: "NLP processing of customer reviews: cleaning, stopword removal, lemmatization, TF-IDF vectorization and stratified split for sentiment analysis.",
-    },
-    tags: ["NLP", "TF-IDF", "Lemmatization", "Seaborn"],
-  },
-  {
-    cat: "data", emo: "🐼", repo: "pandas_atelier",
-    title: { fr: "Analyse de données IoT avec Pandas", en: "IoT Data Analysis with Pandas" },
-    desc: {
-      fr: "Exploration, nettoyage et agrégation de mesures de capteurs IoT avec Pandas, puis export des données propres en CSV et JSON.",
-      en: "Exploration, cleaning and aggregation of IoT sensor readings with Pandas, then export of clean data to CSV and JSON.",
-    },
-    tags: ["Pandas", "EDA", "CSV / JSON"],
-  },
-  {
-    cat: "data", emo: "🔢", repo: "atelier-numpy-iot",
-    title: { fr: "Calcul scientifique IoT avec NumPy", en: "IoT Scientific Computing with NumPy" },
-    desc: {
-      fr: "Manipulation de tableaux multidimensionnels, calculs vectorisés et statistiques descriptives sur des données de capteurs.",
-      en: "Multidimensional array manipulation, vectorized computation and descriptive statistics on sensor data.",
-    },
-    tags: ["NumPy", "Statistics", "Jupyter"],
-  },
-  {
-    cat: "data", emo: "📈", repo: "atelier_matplotlib",
-    title: { fr: "Data visualisation avec Matplotlib", en: "Data Visualization with Matplotlib" },
-    desc: {
-      fr: "Visualisation de l'évolution des températures et des mesures de capteurs, avec export des graphiques en PNG et PDF.",
-      en: "Visualizing temperature trends and sensor readings, with charts exported to PNG and PDF.",
-    },
-    tags: ["Matplotlib", "Data Viz", "IoT"],
-  },
-  {
-    cat: "data", emo: "🎨", repo: "atelier_seaborn",
-    title: { fr: "Visualisation statistique avec Seaborn", en: "Statistical Visualization with Seaborn" },
-    desc: {
-      fr: "Plus de 15 visualisations statistiques pour comprendre un bâtiment intelligent : heatmap de corrélations, pairplot, violin plots, boxplots et régressions par bâtiment.",
-      en: "15+ statistical visualizations to understand a smart building: correlation heatmap, pairplot, violin plots, boxplots and per-building regressions.",
-    },
-    tags: ["Seaborn", "Heatmap", "Pairplot", "EDA"],
-  },
-  {
-    cat: "dev", emo: "☁️", repo: "deploy_api_aws",
-    title: { fr: "API REST Spring Boot déployée sur AWS", en: "Spring Boot REST API deployed on AWS" },
-    desc: {
-      fr: "API back-end développée en Java avec Spring Boot et Maven, structurée de façon professionnelle et préparée pour un déploiement dans le cloud AWS.",
-      en: "Back-end API built in Java with Spring Boot and Maven, professionally structured and prepared for deployment on the AWS cloud.",
-    },
-    tags: ["Java", "Spring Boot", "Maven", "AWS"],
-  },
-  {
-    cat: "dev", emo: "🧩", repo: "Atelier_technos_web_IA",
-    title: { fr: "AI Workspace — Tableau de bord web", en: "AI Workspace — Web Dashboard" },
-    desc: {
-      fr: "Interface web d'un espace de travail IA avec tableau de bord : mise en page responsive, composants interactifs et intégration de visuels en HTML, CSS et JavaScript.",
-      en: "Web interface for an AI workspace with a dashboard: responsive layout, interactive components and visuals built with HTML, CSS and JavaScript.",
-    },
-    tags: ["HTML5", "CSS3", "JavaScript", "UI"],
-  },
-  {
-    cat: "dev", emo: "🗂️", repo: "datasetManager",
-    title: { fr: "Dataset Manager — Application Python", en: "Dataset Manager — Python App" },
-    desc: {
-      fr: "Application Python en ligne de commande, à l'architecture modulaire, pour gérer un catalogue de datasets : ajout, recherche, statistiques et persistance en CSV et JSON.",
-      en: "Modular command-line Python application to manage a dataset catalog: add, search, statistics and persistence in CSV and JSON.",
-    },
-    tags: ["Python", "POO", "CSV / JSON", "CLI"],
-  },
+  { cat: "ai", emo: "🛡️", featured: true, repo: "Atelier_pratique_LLM",
+    title: { fr: "Assistant RAG spécialisé en cybersécurité", en: "Cybersecurity RAG Assistant" },
+    desc: { fr: "Une chaîne RAG complète qui transforme des documents PDF de référence en base de connaissances interrogeable : extraction, nettoyage, découpage, embeddings et indexation vectorielle.",
+            en: "A complete RAG chain turning reference PDF documents into a searchable knowledge base: extraction, cleaning, chunking, embeddings and vector indexing." },
+    hl: { fr: ["5 documents de référence extraits et normalisés", "Chunks de 1 500 caractères, 15 % de chevauchement — choix argumentés", "Index vectoriel ChromaDB prêt pour un LLM"],
+          en: ["5 reference documents extracted & normalized", "1,500-char chunks, 15% overlap — reasoned design choices", "ChromaDB vector index ready for an LLM"] },
+    tags: ["Python", "LLM", "RAG", "Embeddings", "ChromaDB"] },
+  { cat: "ai", emo: "💼", featured: true, repo: "IA_business_assistant",
+    title: { fr: "AI Business Assistant", en: "AI Business Assistant" },
+    desc: { fr: "Comment obtenir d'un LLM des réponses fiables pour l'entreprise ? Étude appliquée à l'analyse des avis clients, avec des prompts structurés et une comparaison méthodique des techniques.",
+            en: "How do you get reliable business answers from an LLM? An applied study on customer review analysis, with structured prompts and a methodical comparison of techniques." },
+    hl: { fr: ["Prompt en 5 briques : rôle, tâche, contexte, contraintes, format", "Zero-shot, one-shot, few-shot : comparés sur des cas ambigus", "Sorties tabulaires exploitables directement"],
+          en: ["5-block prompts: role, task, context, constraints, format", "Zero-, one- and few-shot compared on ambiguous cases", "Directly usable tabular outputs"] },
+    tags: ["LLM", "Prompt Engineering", "NLP", "Sentiment"] },
+  { cat: "ml", emo: "⚡", repo: "atelier_tensorflow_1",
+    title: { fr: "Prévoir la consommation d'énergie", en: "Forecasting Energy Consumption" },
+    desc: { fr: "Un réseau de neurones TensorFlow/Keras entraîné sur les capteurs IoT d'un bâtiment intelligent pour anticiper sa consommation énergétique.",
+            en: "A TensorFlow/Keras neural network trained on smart-building IoT sensors to anticipate energy consumption." },
+    tags: ["TensorFlow", "Keras", "Regression", "IoT"] },
+  { cat: "ml", emo: "📡", repo: "atelier_scikit_learn",
+    title: { fr: "Diagnostiquer l'état des capteurs", en: "Diagnosing Sensor Health" },
+    desc: { fr: "Un classifieur KNN qui identifie l'état d'un capteur à partir de ses mesures, avec standardisation, split stratifié et évaluation complète.",
+            en: "A KNN classifier identifying a sensor's state from its readings, with scaling, stratified split and full evaluation." },
+    tags: ["scikit-learn", "KNN", "joblib"] },
+  { cat: "data", emo: "🏢", repo: "atelier_preparation_donnees",
+    title: { fr: "Données tabulaires prêtes pour le ML", en: "ML-ready Tabular Data" },
+    desc: { fr: "D'un jeu brut de bâtiment intelligent à un dataset propre : valeurs manquantes, doublons, One-Hot, standardisation et Pipeline scikit-learn.",
+            en: "From a raw smart-building dataset to a clean one: missing values, duplicates, one-hot, scaling and a scikit-learn Pipeline." },
+    tags: ["Pandas", "Pipeline", "OneHot"] },
+  { cat: "data", emo: "🖼️", repo: "Atelier_prepa_donnees_images",
+    title: { fr: "Préparer des images pour la vision", en: "Preparing Images for Vision" },
+    desc: { fr: "Nettoyage, redimensionnement, augmentation de données et découpage train / validation / test d'un dataset d'images.",
+            en: "Cleaning, resizing, data augmentation and train / validation / test split of an image dataset." },
+    tags: ["PIL", "NumPy", "Augmentation"] },
+  { cat: "data", emo: "💬", repo: "Atelier_prepa_donnees_textuelles",
+    title: { fr: "Faire parler les avis clients", en: "Making Customer Reviews Talk" },
+    desc: { fr: "Traitement NLP d'avis clients : stopwords, lemmatisation et vectorisation TF-IDF pour l'analyse de sentiment.",
+            en: "NLP processing of customer reviews: stopwords, lemmatization and TF-IDF vectorization for sentiment analysis." },
+    tags: ["NLP", "TF-IDF", "Lemmatisation"] },
+  { cat: "data", emo: "🐼", repo: "pandas_atelier",
+    title: { fr: "Analyse IoT avec Pandas", en: "IoT Analysis with Pandas" },
+    desc: { fr: "Exploration, nettoyage et agrégation de mesures de capteurs, puis export propre en CSV et JSON.",
+            en: "Exploring, cleaning and aggregating sensor readings, then clean export to CSV and JSON." },
+    tags: ["Pandas", "EDA"] },
+  { cat: "data", emo: "🔢", repo: "atelier-numpy-iot",
+    title: { fr: "Calcul scientifique avec NumPy", en: "Scientific Computing with NumPy" },
+    desc: { fr: "Tableaux multidimensionnels, calculs vectorisés et statistiques descriptives sur des données de capteurs.",
+            en: "Multidimensional arrays, vectorized computation and descriptive statistics on sensor data." },
+    tags: ["NumPy", "Statistiques"] },
+  { cat: "data", emo: "📈", repo: "atelier_matplotlib",
+    title: { fr: "Raconter les températures", en: "Telling the Temperature Story" },
+    desc: { fr: "Visualisations Matplotlib de l'évolution des mesures de capteurs, exportées en PNG et PDF.",
+            en: "Matplotlib visualizations of sensor trends, exported to PNG and PDF." },
+    tags: ["Matplotlib", "Data Viz"] },
+  { cat: "data", emo: "🎨", repo: "atelier_seaborn",
+    title: { fr: "Visualisation statistique avec Seaborn", en: "Statistical Viz with Seaborn" },
+    desc: { fr: "Plus de 15 graphiques pour comprendre un bâtiment intelligent : heatmap, pairplot, violin plots et régressions.",
+            en: "15+ charts to understand a smart building: heatmap, pairplot, violin plots and regressions." },
+    tags: ["Seaborn", "Heatmap", "EDA"] },
+  { cat: "dev", emo: "☁️", repo: "deploy_api_aws",
+    title: { fr: "API REST Spring Boot pour AWS", en: "Spring Boot REST API for AWS" },
+    desc: { fr: "Une API back-end en Java avec Spring Boot et Maven, structurée proprement et prête à être déployée sur AWS.",
+            en: "A Java back-end API with Spring Boot and Maven, cleanly structured and ready to deploy on AWS." },
+    tags: ["Java", "Spring Boot", "AWS"] },
+  { cat: "dev", emo: "🧩", repo: "Atelier_technos_web_IA",
+    title: { fr: "AI Workspace", en: "AI Workspace" },
+    desc: { fr: "Un tableau de bord web responsive pour un espace de travail IA, en HTML, CSS et JavaScript.",
+            en: "A responsive web dashboard for an AI workspace, built with HTML, CSS and JavaScript." },
+    tags: ["HTML", "CSS", "JavaScript"] },
+  { cat: "dev", emo: "🗂️", repo: "datasetManager",
+    title: { fr: "Dataset Manager", en: "Dataset Manager" },
+    desc: { fr: "Application Python modulaire en ligne de commande pour cataloguer des datasets : ajout, recherche, statistiques, CSV/JSON.",
+            en: "Modular command-line Python app to catalog datasets: add, search, statistics, CSV/JSON." },
+    tags: ["Python", "POO", "CLI"] },
 ];
 
 /* ---------- Traductions ---------- */
 const I18N = {
   fr: {
-    "nav.about": "À propos", "nav.skills": "Compétences", "nav.projects": "Projets", "nav.journey": "Parcours", "nav.contact": "Contact",
-    "hero.hello": "Bonjour, je suis",
-    "hero.tagline": "Je transforme les données en décisions et les idées en solutions d'IA à impact — avec une ambition : faire rayonner l'innovation numérique en Afrique.",
-    "hero.cta1": "Voir mes projets", "hero.cta2": "Télécharger mon CV", "hero.available": "Ouverte aux opportunités",
-    "about.title": "À propos de moi",
-    "about.p1": "Je suis <strong>Amanatou Ndiaye</strong>, diplômée d'une <strong>Licence en Ingénierie Informatique</strong> de l'Université Assane Seck de Ziguinchor (UASZ). Actuellement, je poursuis une formation en <strong>Intelligence Artificielle</strong> à la <strong>Sonatel Academy – École du Code d'Orange Digital Center</strong>.",
-    "about.p2": "Passionnée par le numérique, l'innovation et les nouvelles technologies, je m'intéresse particulièrement à l'<span class=\"hl\">Intelligence Artificielle</span>, à la <span class=\"hl\">Data Science</span> et au développement de solutions technologiques. Curieuse et animée par l'envie d'apprendre, j'aime relever des défis, explorer de nouvelles idées et transformer les connaissances en solutions concrètes à impact positif.",
-    "about.p3": "Mon ambition est de contribuer à un écosystème numérique <strong>innovant, inclusif et porteur de changement</strong>, particulièrement en Afrique. 🌍",
-    "about.s1": "Projets publiés", "about.s2": "Technologies", "about.s3": "Domaines d'expertise", "about.s4": "Curiosité",
-    "skills.title": "Compétences",
-    "projects.title": "Projets",
-    "projects.sub": "Une sélection de mes travaux en IA, Machine Learning, Data et développement. Filtre par domaine 👇",
-    "projects.featured": "★ À la une", "projects.code": "Voir le code",
-    "journey.title": "Parcours", "journey.now": "En cours", "journey.done": "🎓 Diplômée",
-    "journey.challenge": "🏆 Challenge", "journey.exp": "💼 Expérience",
-    "journey.j1.date": "Depuis juil. 2026",
-    "journey.j1.title": "CPS — Certificat de spécialisation Référent IA",
-    "journey.j1.desc": "Parcours intensif orienté projets : préparation de données (tabulaires, images, textes), Machine Learning, Deep Learning, LLM, RAG et prompt engineering.",
-    "journey.j2.title": "Licence en Ingénierie Informatique",
-    "journey.j2.desc": "Algorithmique, programmation (Java, Python, C), bases de données, développement web, réseaux et sécurité (supervision Nagios / SNMP, serveur web HTTPS), architecture N-Tiers et génie logiciel.",
-    "journey.j3.title": "Baccalauréat Sciences expérimentales (S2)",
-    "journey.j4.date": "Mai — août 2026",
-    "journey.j4.title": "Stagiaire en gestion de caisse",
-    "journey.j4.desc": "Encaissements et moyens de paiement, suivi des ventes sur logiciel de gestion, participation aux inventaires, ouverture et clôture de caisse, relation client et gestion des réclamations.",
-    "journey.j5.title": "PAS Challenge SALSTIS 2026 — Innovation numérique",
-    "journey.j5.org": "JOJ Dakar 2026 · Accueil & mobilité des spectateurs",
-    "journey.j5.desc": "Conception d'une solution combinant une application mobile intuitive et des bornes interactives multilingues enrichies par l'IA, pour améliorer l'information en temps réel, la fluidité des déplacements, la sécurité et le confort des spectateurs.",
-    "about.fr": "Français — courant", "about.en": "Anglais — intermédiaire", "about.wo": "Wolof — langue maternelle",
-    "contact.title": "Construisons quelque chose <span class=\"gradient-text\">d'incroyable</span> ensemble.",
-    "contact.sub": "Stage, opportunité, collaboration ou simple échange autour de la data et de l'IA : ma boîte mail est toujours ouverte.",
-    "contact.copy": "Copier", "contact.copied": "Adresse e-mail copiée ✓",
-    "contact.name": "Votre nom", "contact.subject": "Sujet", "contact.message": "Message", "contact.send": "Envoyer",
+    "nav.about": "À propos", "nav.services": "Expertise", "nav.projects": "Projets", "nav.journey": "Parcours", "nav.contact": "Contact",
+    "hero.eyebrow": "Portfolio — Data & Intelligence Artificielle", "hero.iam": "Je suis",
+    "hero.lead": "Je conçois des solutions data et IA utiles, fiables et compréhensibles — pour aider les organisations à mieux décider, ici en Afrique et au-delà.",
+    "hero.cta1": "Découvrir mes projets", "hero.cta2": "Télécharger mon CV",
+    "hero.nowLabel": "Actuellement", "hero.now": "CPS Référent IA · Orange Digital Center",
+    "hero.basedLbl": "Basée à", "hero.statusLbl": "Statut", "hero.status": "Disponible — stages & opportunités",
+    badge: "OUVERTE AUX OPPORTUNITÉS • DATA • IA • ",
+    roles: ["Data Analyst", "Data Scientist", "ML Engineer", "Développeuse Web"],
+    marquee: [["Données", "décisions"], ["Modèles", "impact"], ["Idées", "solutions"], ["Dakar", "le monde"]],
+    "about.label": "À propos", "about.title": "Curieuse de nature, <em>bâtisseuse</em> par passion.",
+    "about.p1": "Je m'appelle <strong>Yaye Amanatou Ndiaye</strong>. Après une <strong>Licence en Ingénierie Informatique</strong> à l'Université Assane Seck de Ziguinchor, je me spécialise aujourd'hui en <strong>Intelligence Artificielle</strong> à la <strong>Sonatel Academy</strong>, l'École du Code d'Orange Digital Center, dans le cadre du certificat <strong>CPS Référent IA</strong>.",
+    "about.p2": "Ce qui m'anime ? Comprendre ce que racontent les données, puis en faire des outils concrets : analyses claires, modèles prédictifs, assistants basés sur les LLM. J'aborde chaque projet avec rigueur, méthode et beaucoup de curiosité.",
+    "about.p3": "Mon cap : mettre la technologie au service d'une <em>Afrique plus innovante et plus inclusive.</em>",
+    "about.s1": "projets publiés sur GitHub", "about.s2": "outils & technologies",
+    "about.nowK": "En ce moment", "about.now": "CPS Référent IA <em>@ Orange Digital Center</em>", "about.nowS": "Depuis juillet 2026 · Dakar",
+    "about.langsK": "Langues", "about.fr": "Français", "about.en": "Anglais", "about.frL": "Courant", "about.enL": "Intermédiaire", "about.woL": "Natif",
+    "about.traitsK": "Atouts",
+    "services.label": "Expertise", "services.title": "Ce que je fais, <em>et comment.</em>",
+    "process.k": "Ma méthode de travail", "skills.k": "Boîte à outils",
+    "projects.label": "Projets sélectionnés", "projects.title": "Des idées devenues <em>projets concrets.</em>",
+    "projects.all": "Tous mes dépôts sur GitHub", "projects.featured": "★ Projet phare", "projects.code": "Code",
+    "projects.moreK": "Et ce n'est qu'un début", "projects.moreT": "D'autres projets <em>sont en cours</em> — suivez-les sur GitHub.",
+    "journey.label": "Parcours", "journey.title": "Un chemin <em>pas à pas.</em>",
+    "journey.intro": "De Saint-Louis à Dakar en passant par Ziguinchor : chaque étape a renforcé mes bases techniques et mon envie d'innover.",
+    "journey.live": "En cours",
+    "contact.label": "Contact", "contact.title": "Une idée, un stage, un projet&nbsp;? <em>Parlons-en.</em>",
+    "contact.sub": "Je serai ravie d'échanger avec vous autour de la data, de l'IA ou d'une future collaboration.",
+    "contact.copy": "Cliquer pour copier", "contact.copied": "Adresse copiée ✓", "contact.cv": "Curriculum vitae",
+    "contact.name": "Votre nom", "contact.subject": "Sujet", "contact.message": "Votre message", "contact.send": "Envoyer le message",
     "contact.opening": "Ouverture de votre messagerie… ✉️",
-    "footer.made": "Conçu avec passion à Dakar",
-    roles: ["Data Analyst", "Data Scientist Junior", "ML Engineer", "Développeuse Web", "Passionnée d'IA 🤖"],
+    "footer.made": "Conçu & développé par Amanatou — Dakar, Sénégal", "footer.top": "Haut de page",
   },
   en: {
-    "nav.about": "About", "nav.skills": "Skills", "nav.projects": "Projects", "nav.journey": "Journey", "nav.contact": "Contact",
-    "hero.hello": "Hi, I'm",
-    "hero.tagline": "I turn data into decisions and ideas into impactful AI solutions — with one ambition: helping digital innovation shine across Africa.",
-    "hero.cta1": "View my projects", "hero.cta2": "Download my CV", "hero.available": "Open to opportunities",
-    "about.title": "About me",
-    "about.p1": "I'm <strong>Amanatou Ndiaye</strong>, holder of a <strong>Bachelor's degree in Computer Engineering</strong> from Assane Seck University of Ziguinchor (UASZ). I'm currently pursuing an <strong>Artificial Intelligence</strong> program at <strong>Sonatel Academy – Orange Digital Center's Coding School</strong>.",
-    "about.p2": "Passionate about digital technology and innovation, I'm especially interested in <span class=\"hl\">Artificial Intelligence</span>, <span class=\"hl\">Data Science</span> and building tech solutions. Curious and driven by a love of learning, I enjoy taking on challenges, exploring new ideas and turning knowledge into concrete solutions with positive impact.",
-    "about.p3": "My ambition is to contribute to an <strong>innovative, inclusive and transformative</strong> digital ecosystem, especially in Africa. 🌍",
-    "about.s1": "Published projects", "about.s2": "Technologies", "about.s3": "Areas of expertise", "about.s4": "Curiosity",
-    "skills.title": "Skills",
-    "projects.title": "Projects",
-    "projects.sub": "A selection of my work in AI, Machine Learning, Data and development. Filter by domain 👇",
-    "projects.featured": "★ Featured", "projects.code": "View code",
-    "journey.title": "Journey", "journey.now": "In progress", "journey.done": "🎓 Graduated",
-    "journey.challenge": "🏆 Challenge", "journey.exp": "💼 Experience",
-    "journey.j1.date": "Since Jul. 2026",
-    "journey.j1.title": "CPS — Professional Specialization Certificate: AI Referent",
-    "journey.j1.desc": "Intensive project-based program: data preparation (tabular, images, text), Machine Learning, Deep Learning, LLMs, RAG and prompt engineering.",
-    "journey.j2.title": "Bachelor's in Computer Engineering",
-    "journey.j2.desc": "Algorithms, programming (Java, Python, C), databases, web development, networks and security (Nagios / SNMP monitoring, HTTPS web server), N-tier architecture and software engineering.",
-    "journey.j3.title": "Scientific Baccalaureate (S2 — Experimental Sciences)",
-    "journey.j4.date": "May — Aug. 2026",
-    "journey.j4.title": "Cashier Operations Intern",
-    "journey.j4.desc": "Payment processing, sales tracking in management software, inventory support, register opening and closing, customer relations and complaint handling.",
-    "journey.j5.title": "PAS Challenge SALSTIS 2026 — Digital Innovation",
-    "journey.j5.org": "Dakar 2026 Youth Olympic Games · Spectator welcome & mobility",
-    "journey.j5.desc": "Designed a solution combining an intuitive mobile app and AI-powered multilingual interactive kiosks to improve real-time information, crowd flow, safety and spectator comfort.",
-    "about.fr": "French — fluent", "about.en": "English — intermediate", "about.wo": "Wolof — native",
-    "contact.title": "Let's build something <span class=\"gradient-text\">amazing</span> together.",
-    "contact.sub": "Internship, opportunity, collaboration or just a chat about data and AI: my inbox is always open.",
-    "contact.copy": "Copy", "contact.copied": "Email address copied ✓",
-    "contact.name": "Your name", "contact.subject": "Subject", "contact.message": "Message", "contact.send": "Send",
+    "nav.about": "About", "nav.services": "Expertise", "nav.projects": "Work", "nav.journey": "Journey", "nav.contact": "Contact",
+    "hero.eyebrow": "Portfolio — Data & Artificial Intelligence", "hero.iam": "I'm a",
+    "hero.lead": "I design useful, reliable and understandable data & AI solutions — helping organizations make better decisions, in Africa and beyond.",
+    "hero.cta1": "Explore my work", "hero.cta2": "Download my CV",
+    "hero.nowLabel": "Currently", "hero.now": "AI Referent Certificate · Orange Digital Center",
+    "hero.basedLbl": "Based in", "hero.statusLbl": "Status", "hero.status": "Available — internships & opportunities",
+    badge: "OPEN TO OPPORTUNITIES • DATA • AI • ",
+    roles: ["Data Analyst", "Data Scientist", "ML Engineer", "Web Developer"],
+    marquee: [["Data", "decisions"], ["Models", "impact"], ["Ideas", "solutions"], ["Dakar", "the world"]],
+    "about.label": "About", "about.title": "Curious by nature, <em>builder</em> by passion.",
+    "about.p1": "My name is <strong>Yaye Amanatou Ndiaye</strong>. After a <strong>Bachelor's in Computer Engineering</strong> at Assane Seck University of Ziguinchor, I'm now specializing in <strong>Artificial Intelligence</strong> at <strong>Sonatel Academy</strong>, Orange Digital Center's coding school, through the <strong>AI Referent (CPS)</strong> certificate.",
+    "about.p2": "What drives me? Understanding the stories data tells, then turning them into concrete tools: clear analyses, predictive models, LLM-powered assistants. I approach every project with rigor, method and plenty of curiosity.",
+    "about.p3": "My compass: putting technology to work for a <em>more innovative and inclusive Africa.</em>",
+    "about.s1": "projects published on GitHub", "about.s2": "tools & technologies",
+    "about.nowK": "Right now", "about.now": "AI Referent Certificate <em>@ Orange Digital Center</em>", "about.nowS": "Since July 2026 · Dakar",
+    "about.langsK": "Languages", "about.fr": "French", "about.en": "English", "about.frL": "Fluent", "about.enL": "Intermediate", "about.woL": "Native",
+    "about.traitsK": "Strengths",
+    "services.label": "Expertise", "services.title": "What I do, <em>and how.</em>",
+    "process.k": "How I work", "skills.k": "Toolbox",
+    "projects.label": "Selected work", "projects.title": "Ideas turned into <em>real projects.</em>",
+    "projects.all": "All my repositories on GitHub", "projects.featured": "★ Featured", "projects.code": "Code",
+    "projects.moreK": "And this is just the beginning", "projects.moreT": "More projects <em>are in progress</em> — follow them on GitHub.",
+    "journey.label": "Journey", "journey.title": "One step <em>at a time.</em>",
+    "journey.intro": "From Saint-Louis to Dakar by way of Ziguinchor: every step strengthened my technical foundations and my drive to innovate.",
+    "journey.live": "In progress",
+    "contact.label": "Contact", "contact.title": "An idea, an internship, a project? <em>Let's talk.</em>",
+    "contact.sub": "I'd be delighted to chat about data, AI or a future collaboration.",
+    "contact.copy": "Click to copy", "contact.copied": "Address copied ✓", "contact.cv": "Résumé",
+    "contact.name": "Your name", "contact.subject": "Subject", "contact.message": "Your message", "contact.send": "Send message",
     "contact.opening": "Opening your mail app… ✉️",
-    "footer.made": "Crafted with passion in Dakar",
-    roles: ["Data Analyst", "Junior Data Scientist", "ML Engineer", "Web Developer", "AI Enthusiast 🤖"],
+    "footer.made": "Designed & built by Amanatou — Dakar, Senegal", "footer.top": "Back to top",
   },
 };
 
@@ -320,157 +264,44 @@ const store = {
   set(k, v) { try { localStorage.setItem(k, v); } catch { /* ignore */ } },
 };
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
-const canHover = matchMedia("(hover: hover) and (pointer: fine)").matches;
-
-let lang = store.get("lang") || (navigator.language || "fr").slice(0, 2);
-if (!I18N[lang]) lang = "fr";
-let currentFilter = "all";
-const t = (k) => I18N[lang][k] ?? k;
+const fineHover = matchMedia("(hover: hover) and (pointer: fine)").matches;
+const root = document.documentElement;
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-/* ---------- Thème ---------- */
-const root = document.documentElement;
-const savedTheme = store.get("theme") || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-root.dataset.theme = savedTheme;
-$("#themeBtn").addEventListener("click", () => {
-  const next = root.dataset.theme === "dark" ? "light" : "dark";
-  root.dataset.theme = next;
-  store.set("theme", next);
-});
+let lang = store.get("lang") || ((navigator.language || "fr").startsWith("en") ? "en" : "fr");
+if (!I18N[lang]) lang = "fr";
+let filter = "all";
+const t = (k) => I18N[lang][k] ?? k;
+const L = (o) => (typeof o === "string" ? o : o[lang]);
 
-/* ---------- Rendu : compétences ---------- */
-function renderSkills() {
-  $("#skillsGrid").innerHTML = SKILLS.map((g) => `
-    <div class="skill-card glass reveal in" style="--c:${g.color}">
-      <h3><span class="emo">${g.emo}</span>${esc(g.title[lang])}</h3>
-      <div class="skill-list">
-        ${g.items.map((s) => `<span class="skill">${s.i
-          ? `<img src="${s.i}" alt="" loading="lazy" onerror="this.replaceWith(document.createTextNode('•'))">`
-          : `<span aria-hidden="true">${s.e}</span>`}${esc(s.n)}</span>`).join("")}
-      </div>
-    </div>`).join("");
-}
-
-/* ---------- Rendu : bandeau ---------- */
-function renderMarquee() {
-  const items = SKILLS.flatMap((g) => g.items).filter((s) => s.i);
-  const html = items.map((s) => `<span class="marquee-item"><img src="${s.i}" alt="" loading="lazy">${esc(s.n)}</span>`).join("");
-  $("#marquee").innerHTML = html + html;
-}
-
-/* ---------- Rendu : projets ---------- */
-const ghIcon = `<svg viewBox="0 0 24 24" class="fill"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>`;
-
-function renderFilters() {
-  $("#filters").innerHTML = Object.entries(CATS).map(([k, c]) => {
-    const n = k === "all" ? PROJECTS.length : PROJECTS.filter((p) => p.cat === k).length;
-    return `<button class="filter ${k === currentFilter ? "active" : ""}" data-f="${k}" role="tab" aria-selected="${k === currentFilter}">${esc(c[lang])}<span class="count">${n}</span></button>`;
-  }).join("");
-}
-
-function renderProjects() {
-  $("#projectsGrid").innerHTML = PROJECTS.map((p) => {
-    const c = CATS[p.cat];
-    return `
-    <article class="project ${p.featured ? "featured" : ""}" data-cat="${p.cat}" style="--c:${c.color}">
-      ${p.featured ? `<span class="p-star">${t("projects.featured")}</span>` : ""}
-      <div class="p-top">
-        <div class="p-icon" aria-hidden="true">${p.emo}</div>
-        <div class="p-links">
-          <a href="${GH}${p.repo}" target="_blank" rel="noopener" aria-label="${t("projects.code")} — ${esc(p.title[lang])}" title="${t("projects.code")}">${ghIcon}</a>
-        </div>
-      </div>
-      <span class="p-cat">${esc(c[lang])}</span>
-      <h3>${esc(p.title[lang])}</h3>
-      <p>${esc(p.desc[lang])}</p>
-      ${p.hl ? `<ul class="p-highlights">${p.hl[lang].map((h) => `<li>${esc(h)}</li>`).join("")}</ul>` : ""}
-      <div class="p-tags">${p.tags.map((tg) => `<span>${esc(tg)}</span>`).join("")}</div>
-    </article>`;
-  }).join("");
-  applyFilter(false);
-  bindCards();
-}
-
-function applyFilter(animate = true) {
-  $$(".project").forEach((el, i) => {
-    const show = currentFilter === "all" || el.dataset.cat === currentFilter;
-    el.classList.toggle("hide", !show);
-    // "À la une" en double largeur seulement dans la vue "Tous"
-    el.classList.toggle("featured", show && currentFilter === "all" && !!PROJECTS[i].featured);
-    if (show && animate) {
-      el.classList.remove("pop");
-      void el.offsetWidth;
-      el.style.animationDelay = `${(i % 6) * 60}ms`;
-      el.classList.add("pop");
-    }
-  });
-}
-
-$("#filters").addEventListener("click", (e) => {
-  const b = e.target.closest(".filter");
-  if (!b) return;
-  currentFilter = b.dataset.f;
-  $$(".filter").forEach((f) => { f.classList.toggle("active", f === b); f.setAttribute("aria-selected", f === b); });
-  applyFilter();
-});
-
-/* ---------- Effets cartes : spotlight + tilt 3D ---------- */
-function bindCards() {
-  if (!canHover || reduceMotion) return;
-  $$(".project").forEach((card) => {
-    card.addEventListener("pointermove", (e) => {
-      const r = card.getBoundingClientRect();
-      const x = e.clientX - r.left, y = e.clientY - r.top;
-      card.style.setProperty("--mx", `${x}px`);
-      card.style.setProperty("--my", `${y}px`);
-      const rx = ((y / r.height) - 0.5) * -6, ry = ((x / r.width) - 0.5) * 6;
-      card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
-    });
-    card.addEventListener("pointerleave", () => { card.style.transform = ""; });
-  });
-}
-
-/* ---------- Langue ---------- */
-function applyLang(animate) {
-  root.lang = lang;
-  $$("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
-  $$("[data-i18n-html]").forEach((el) => { el.innerHTML = t(el.dataset.i18nHtml); });
-  $("#langBtn").textContent = lang === "fr" ? "EN" : "FR";
-  renderSkills();
-  renderFilters();
-  renderProjects();
-  restartTyping();
-  if (animate) {
-    $$("main, .nav-links").forEach((el) => { el.classList.remove("lang-fade"); void el.offsetWidth; el.classList.add("lang-fade"); });
-  }
-}
-$("#langBtn").addEventListener("click", () => {
-  lang = lang === "fr" ? "en" : "fr";
-  store.set("lang", lang);
-  applyLang(true);
-});
-
-/* ---------- Texte qui s'écrit ---------- */
-let typingTimer;
-function restartTyping() {
-  clearTimeout(typingTimer);
-  const el = $("#typed");
-  const roles = I18N[lang].roles;
-  if (reduceMotion) { el.textContent = roles.join(" · "); return; }
-  let r = 0, i = 0, del = false;
-  const tick = () => {
-    const word = roles[r];
-    i += del ? -1 : 1;
-    el.textContent = word.slice(0, i);
-    let delay = del ? 40 : 85;
-    if (!del && i === word.length) { del = true; delay = 1700; }
-    else if (del && i === 0) { del = false; r = (r + 1) % roles.length; delay = 350; }
-    typingTimer = setTimeout(tick, delay);
+/* ---------- Écran d'intro ---------- */
+(function loader() {
+  const el = $("#loader");
+  let seen = false;
+  try { seen = sessionStorage.getItem("intro") === "1"; } catch { /* ignore */ }
+  if (reduceMotion || seen) { el.remove(); return; }
+  document.body.classList.add("loading");
+  const count = $("#loaderCount"), bar = $("#loaderBar");
+  const start = performance.now(), dur = 1300;
+  const step = (now) => {
+    const p = Math.min((now - start) / dur, 1);
+    const v = Math.round(100 * (1 - Math.pow(1 - p, 3)));
+    count.textContent = v; bar.style.width = v + "%";
+    if (p < 1) return requestAnimationFrame(step);
+    el.classList.add("done");
+    document.body.classList.remove("loading");
+    try { sessionStorage.setItem("intro", "1"); } catch { /* ignore */ }
+    setTimeout(() => el.remove(), 1200);
   };
-  tick();
-}
+  requestAnimationFrame(step);
+})();
 
-/* ---------- Apparition au défilement + compteurs ---------- */
+/* ---------- Horloge de Dakar ---------- */
+const clockFmt = new Intl.DateTimeFormat("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Africa/Dakar" });
+const tick = () => { $("#clock").textContent = clockFmt.format(new Date()); };
+tick(); setInterval(tick, 15000);
+
+/* ---------- Révélations & compteurs ---------- */
 const io = new IntersectionObserver((entries) => {
   entries.forEach((en) => {
     if (!en.isIntersecting) return;
@@ -478,34 +309,191 @@ const io = new IntersectionObserver((entries) => {
     $$("[data-count]", en.target).forEach(countUp);
     io.unobserve(en.target);
   });
-}, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-$$(".reveal").forEach((el) => io.observe(el));
+}, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
 
 function countUp(el) {
   const end = +el.dataset.count;
   if (reduceMotion) { el.textContent = end; return; }
-  const start = performance.now(), dur = 1400;
-  const step = (now) => {
-    const p = Math.min((now - start) / dur, 1);
-    el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
-    if (p < 1) requestAnimationFrame(step);
+  const t0 = performance.now(), dur = 1600;
+  const f = (now) => {
+    const p = Math.min((now - t0) / dur, 1);
+    el.textContent = Math.round(end * (1 - Math.pow(1 - p, 4)));
+    if (p < 1) requestAnimationFrame(f);
   };
-  requestAnimationFrame(step);
+  requestAnimationFrame(f);
 }
 
+/* ---------- Rendus ---------- */
+function renderMarquee() {
+  const items = I18N[lang].marquee.map(([a, b]) => `<span class="mq">${esc(a)} <em>→ ${esc(b)}</em><span class="star">✦</span></span>`).join("");
+  $("#marquee").innerHTML = items + items + items + items;
+}
+
+let roleIdx = 0, roleTimer;
+function renderRoles() {
+  const roles = I18N[lang].roles;
+  const track = $("#roleTrack");
+  track.innerHTML = [...roles, roles[0]].map((r) => `<span>${esc(r)}</span>`).join("");
+  roleIdx = 0;
+  track.style.transition = "none"; track.style.transform = "translateY(0)";
+  clearInterval(roleTimer);
+  if (reduceMotion) return;
+  roleTimer = setInterval(() => {
+    roleIdx++;
+    track.style.transition = "";
+    track.style.transform = `translateY(-${roleIdx * 1.2}em)`;
+    if (roleIdx === roles.length) {
+      setTimeout(() => { track.style.transition = "none"; track.style.transform = "translateY(0)"; roleIdx = 0; }, 850);
+    }
+  }, 2400);
+}
+
+function renderTraits() {
+  $("#traits").innerHTML = TRAITS[lang].map((x) => `<span class="trait">${esc(x)}</span>`).join("");
+}
+
+function renderServices() {
+  $("#servicesList").innerHTML = SERVICES.map((s, i) => `
+    <article class="svc" style="--svc:${s.c}">
+      <span class="svc-n">0${i + 1}</span>
+      <h3 class="svc-t">${s.t[lang]}</h3>
+      <div><p class="svc-d">${esc(s.d[lang])}</p><div class="svc-tags">${s.tags.map((x) => `<span>${esc(x)}</span>`).join("")}</div></div>
+      <span class="svc-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </article>`).join("");
+  $("#steps").innerHTML = STEPS.map((s, i) => `
+    <li class="step" style="--c:${s.c}">
+      <div class="step-top"><span class="step-n">0${i + 1}</span><span class="step-ic" aria-hidden="true">${s.ic}</span></div>
+      <h3>${esc(s.t[lang])}</h3><p>${esc(s.d[lang])}</p>
+    </li>`).join("");
+  $("#stackRows").innerHTML = SKILLS.map((g) => `
+    <div class="srow" style="--c:${g.color}">
+      <h3>${esc(g.title[lang])}</h3>
+      <div class="chips">${g.items.map((s) => `<span class="chip">${s.i
+        ? `<img src="${s.i}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'e',textContent:'•'}))">`
+        : `<span class="e" aria-hidden="true">${s.e}</span>`}${esc(s.n)}</span>`).join("")}</div>
+    </div>`).join("");
+}
+
+function renderJourney() {
+  $("#timeline").innerHTML = JOURNEY.map((j) => `
+    <li class="tl-it" style="--c:${j.c}">
+      <span class="tl-date">${esc(L(j.date))}</span>
+      <div>
+        ${j.live ? `<span class="tl-badge"><span class="live-dot"></span>${t("journey.live")}</span>` : `<span class="tl-badge">${esc(L(j.badge))}</span>`}
+        <h3>${esc(L(j.t))}</h3>
+        <p class="tl-org">${esc(L(j.o))}</p>
+        <p>${esc(L(j.d))}</p>
+      </div>
+    </li>`).join("");
+  $$("#timeline .tl-it").forEach((el) => io.observe(el));
+}
+
+/* Mini-graphique déterministe pour chaque couverture de projet */
+function chart(seed) {
+  let s = seed * 7919;
+  const rnd = () => ((s = (s * 9301 + 49297) % 233280) / 233280);
+  const n = 12, pts = [];
+  let y = 60 + rnd() * 20;
+  for (let i = 0; i < n; i++) { y = Math.max(15, Math.min(90, y + (rnd() - 0.45) * 26)); pts.push([(i / (n - 1)) * 400, y]); }
+  const d = pts.map((p, i) => `${i ? "L" : "M"}${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(" ");
+  return `<svg class="chart" viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true">
+    <path class="area" d="${d} L400 100 L0 100 Z"/><path class="line" d="${d}" vector-effect="non-scaling-stroke"/></svg>`;
+}
+
+function renderFilters() {
+  $("#filters").innerHTML = Object.entries(CATS).map(([k, c]) => {
+    const n = k === "all" ? PROJECTS.length : PROJECTS.filter((p) => p.cat === k).length;
+    return `<button class="filter ${k === filter ? "active" : ""}" data-f="${k}" role="tab" aria-selected="${k === filter}">${esc(c[lang])}<sup>${n}</sup></button>`;
+  }).join("");
+}
+
+function renderProjects() {
+  $("#projectsGrid").innerHTML = PROJECTS.map((p, i) => `
+    <a class="pcard" href="${GH}${p.repo}" target="_blank" rel="noopener" data-cat="${p.cat}" data-i="${i}" style="--c:${CATS[p.cat].color}" data-cursor="${t("projects.code")} ↗">
+      <div class="cover">
+        <div class="cover-top"><span class="cover-idx">${String(i + 1).padStart(2, "0")} / ${PROJECTS.length}</span><span class="cover-emo" aria-hidden="true">${p.emo}</span></div>
+        ${chart(i + 3)}
+        ${p.featured ? `<span class="cover-star">${t("projects.featured")}</span>` : ""}
+      </div>
+      <div class="pbody">
+        <span class="pcat">${esc(CATS[p.cat][lang])}</span>
+        <h3>${esc(p.title[lang])}</h3>
+        <p>${esc(p.desc[lang])}</p>
+        ${p.hl ? `<ul class="phl">${p.hl[lang].map((h) => `<li>${esc(h)}</li>`).join("")}</ul>` : ""}
+        <div class="pfoot">
+          <div class="ptags">${p.tags.map((x) => `<span>${esc(x)}</span>`).join("")}</div>
+          <span class="plink" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </div>
+      </div>
+    </a>`).join("") + `
+    <a class="pmore" href="https://github.com/NdiayeAmanatou?tab=repositories" target="_blank" rel="noopener" data-cursor="GitHub ↗">
+      <span class="mono pmore-k">${t("projects.moreK")}</span>
+      <span class="pmore-t">${t("projects.moreT")}</span>
+      <span class="pmore-go"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+    </a>`;
+  applyFilter(false);
+  bindCursorTargets();
+}
+
+function applyFilter(animate = true) {
+  let k = 0;
+  $$(".pcard").forEach((el) => {
+    const p = PROJECTS[+el.dataset.i];
+    const show = filter === "all" || p.cat === filter;
+    el.classList.toggle("hide", !show);
+    el.classList.toggle("featured", show && filter === "all" && !!p.featured);
+    if (!show) return;
+    if (animate) { el.classList.remove("pop"); void el.offsetWidth; el.style.animationDelay = `${(k++ % 6) * 70}ms`; el.classList.add("pop", "in"); }
+    else io.observe(el);
+  });
+  const more = $(".pmore");
+  if (more) more.hidden = filter !== "all";
+}
+
+$("#filters").addEventListener("click", (e) => {
+  const b = e.target.closest(".filter");
+  if (!b) return;
+  filter = b.dataset.f;
+  $$(".filter").forEach((f) => { f.classList.toggle("active", f === b); f.setAttribute("aria-selected", f === b); });
+  applyFilter();
+});
+
+/* ---------- Langue ---------- */
+function applyLang(animate) {
+  root.lang = lang;
+  $$("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
+  $$("[data-i18n-html]").forEach((el) => { el.innerHTML = t(el.dataset.i18nHtml); });
+  $("#langBtn").textContent = lang === "fr" ? "EN" : "FR";
+  $("#badgeText").textContent = I18N[lang].badge;
+  renderMarquee(); renderRoles(); renderTraits(); renderServices(); renderJourney(); renderFilters(); renderProjects();
+  if (animate) { const m = $("main"); m.classList.remove("lang-fade"); void m.offsetWidth; m.classList.add("lang-fade"); }
+}
+$("#langBtn").addEventListener("click", () => {
+  lang = lang === "fr" ? "en" : "fr";
+  store.set("lang", lang);
+  applyLang(true);
+});
+
 /* ---------- Navigation ---------- */
-const nav = $("#nav"), burger = $("#burger"), links = $("#navLinks"), progress = $(".scroll-progress");
+const nav = $("#nav"), burger = $("#burger"), links = $("#navLinks"), progress = $(".progress");
+const archImg = $(".arch img");
+let lastY = 0;
 addEventListener("scroll", () => {
-  const h = document.documentElement;
-  progress.style.transform = `scaleX(${h.scrollTop / (h.scrollHeight - h.clientHeight || 1)})`;
-  nav.classList.toggle("scrolled", h.scrollTop > 20);
+  const y = scrollY, h = document.documentElement;
+  progress.style.transform = `scaleX(${y / (h.scrollHeight - h.clientHeight || 1)})`;
+  nav.classList.toggle("scrolled", y > 30);
+  nav.classList.toggle("hidden", y > lastY && y > 400 && !links.classList.contains("open"));
+  lastY = y;
+  if (!reduceMotion && y < innerHeight) archImg.style.transform = `scale(1.08) translateY(${y * 0.06}px)`;
 }, { passive: true });
 burger.addEventListener("click", () => {
   const open = links.classList.toggle("open");
   burger.setAttribute("aria-expanded", open);
+  document.body.style.overflow = open ? "hidden" : "";
 });
 links.addEventListener("click", (e) => {
-  if (e.target.closest("a")) { links.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }
+  if (!e.target.closest("a")) return;
+  links.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); document.body.style.overflow = "";
 });
 const navIO = new IntersectionObserver((entries) => {
   entries.forEach((en) => {
@@ -514,35 +502,115 @@ const navIO = new IntersectionObserver((entries) => {
 }, { rootMargin: "-45% 0px -50% 0px" });
 $$("section[id]").forEach((s) => navIO.observe(s));
 
-/* ---------- Curseur lumineux, portrait 3D, boutons magnétiques ---------- */
-if (canHover && !reduceMotion) {
-  const glow = $(".cursor-glow");
-  addEventListener("pointermove", (e) => { glow.style.left = `${e.clientX}px`; glow.style.top = `${e.clientY}px`; }, { passive: true });
-
-  const portrait = $(".portrait");
-  $(".hero").addEventListener("pointermove", (e) => {
-    const x = e.clientX / innerWidth - 0.5, y = e.clientY / innerHeight - 0.5;
-    portrait.style.transform = `rotateY(${x * 14}deg) rotateX(${y * -14}deg)`;
+/* ---------- Curseur personnalisé & boutons magnétiques ---------- */
+const cur = $(".cursor"), curDot = $(".cursor-dot"), curLabel = $(".cursor-label");
+const useCursor = fineHover && !reduceMotion;
+function bindCursorTargets() {
+  if (!useCursor) return;
+  $$("[data-cursor]").forEach((el) => {
+    if (el.dataset.cbound) return;
+    el.dataset.cbound = "1";
+    el.addEventListener("pointerenter", () => { curLabel.textContent = el.dataset.cursor; cur.classList.add("big"); });
+    el.addEventListener("pointerleave", () => cur.classList.remove("big"));
   });
-  $(".hero").addEventListener("pointerleave", () => { portrait.style.transform = ""; });
+}
+if (useCursor) {
+  document.body.classList.add("has-cursor");
+  let mx = innerWidth / 2, my = innerHeight / 2, cx = mx, cy = my;
+  addEventListener("pointermove", (e) => {
+    mx = e.clientX; my = e.clientY;
+    if (!document.body.classList.contains("cursor-on")) { cx = mx; cy = my; document.body.classList.add("cursor-on"); }
+    curDot.style.transform = `translate(${mx}px, ${my}px)`;
+  }, { passive: true });
+  (function follow() {
+    cx += (mx - cx) * 0.18; cy += (my - cy) * 0.18;
+    cur.style.transform = `translate(${cx}px, ${cy}px)`;
+    requestAnimationFrame(follow);
+  })();
+  document.addEventListener("pointerover", (e) => {
+    const h = e.target.closest("a, button, .chip, .trait, input, textarea");
+    cur.classList.toggle("hover", !!h && !h.dataset.cursor);
+  });
+  document.documentElement.addEventListener("pointerleave", () => { cur.style.opacity = 0; curDot.style.opacity = 0; });
+  document.documentElement.addEventListener("pointerenter", () => { cur.style.opacity = 1; curDot.style.opacity = 1; });
 
   $$(".magnetic").forEach((b) => {
     b.addEventListener("pointermove", (e) => {
       const r = b.getBoundingClientRect();
-      b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.25}px, ${(e.clientY - r.top - r.height / 2) * 0.35}px)`;
+      b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.22}px, ${(e.clientY - r.top - r.height / 2) * 0.3}px)`;
     });
     b.addEventListener("pointerleave", () => { b.style.transform = ""; });
   });
 }
 
+/* ---------- Champ de points interactif (hero) ---------- */
+const dots = (function dotfield() {
+  const cv = $("#dotfield"), ctx = cv.getContext("2d"), hero = $(".hero");
+  const DPR = Math.min(devicePixelRatio || 1, 2);
+  const GAP = 30, R = 170;
+  let W = 0, H = 0, pts = [], mouse = { x: -9999, y: -9999 }, raf = 0, visible = true;
+  let ink = "#15130f", acc = "#e8442c";
+  const t0 = performance.now();
+  function recolor() {
+    const cs = getComputedStyle(root);
+    ink = cs.getPropertyValue("--ink").trim() || ink;
+    acc = cs.getPropertyValue("--red").trim() || acc;
+    if (reduceMotion) draw(performance.now());
+  }
+  function resize() {
+    W = hero.offsetWidth; H = hero.offsetHeight;
+    cv.width = W * DPR; cv.height = H * DPR;
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    pts = [];
+    for (let y = GAP / 2; y < H; y += GAP) for (let x = GAP / 2; x < W; x += GAP) pts.push([x, y]);
+  }
+  function draw(now) {
+    const time = (now - t0) / 1000;
+    ctx.clearRect(0, 0, W, H);
+    for (const [x, y] of pts) {
+      const dx = x - mouse.x, dy = y - mouse.y, d = Math.hypot(dx, dy);
+      const wave = reduceMotion ? 0 : (Math.sin(x * 0.012 + time * 1.2) + Math.cos(y * 0.015 + time)) * 0.25;
+      let r = 1 + wave * 0.5, a = 0.13 + wave * 0.05, col = ink, ox = 0, oy = 0;
+      if (d < R) {
+        const k = 1 - d / R;
+        r += k * 2.6; a = 0.13 + k * 0.75; col = k > 0.35 ? acc : ink;
+        ox = (dx / (d || 1)) * k * 10; oy = (dy / (d || 1)) * k * 10;
+      }
+      ctx.globalAlpha = Math.max(0.04, a);
+      ctx.fillStyle = col;
+      ctx.beginPath(); ctx.arc(x + ox, y + oy, Math.max(0.4, r), 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    if (!reduceMotion && visible) raf = requestAnimationFrame(draw);
+  }
+  hero.addEventListener("pointermove", (e) => { const r = hero.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+  hero.addEventListener("pointerleave", () => { mouse.x = mouse.y = -9999; });
+  new IntersectionObserver(([en]) => {
+    visible = en.isIntersecting;
+    cancelAnimationFrame(raf);
+    if (visible) raf = requestAnimationFrame(draw);
+  }).observe(hero);
+  addEventListener("resize", () => { resize(); if (reduceMotion) draw(performance.now()); });
+  resize(); recolor();
+  if (reduceMotion) draw(performance.now());
+  return { recolor };
+})();
+
+/* ---------- Thème ---------- */
+const syncThemeColor = () => { $('meta[name="theme-color"]').content = root.dataset.theme === "dark" ? "#100f0d" : "#f3eee6"; };
+syncThemeColor();
+$("#themeBtn").addEventListener("click", () => {
+  root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+  store.set("theme", root.dataset.theme);
+  syncThemeColor();
+  dots.recolor();
+});
+
 /* ---------- Contact ---------- */
-const EMAIL = "amma03.ndiaye@gmail.com";
 const toast = (msg) => {
   const el = $("#toast");
-  el.textContent = msg;
-  el.classList.add("show");
-  clearTimeout(toast.t);
-  toast.t = setTimeout(() => el.classList.remove("show"), 2400);
+  el.textContent = msg; el.classList.add("show");
+  clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("show"), 2400);
 };
 $("#copyMail").addEventListener("click", async () => {
   try { await navigator.clipboard.writeText(EMAIL); toast(t("contact.copied")); }
@@ -551,66 +619,13 @@ $("#copyMail").addEventListener("click", async () => {
 $("#contactForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const f = new FormData(e.target);
-  const body = `${f.get("message")}\n\n— ${f.get("name")}`;
   toast(t("contact.opening"));
-  location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(f.get("subject"))}&body=${encodeURIComponent(body)}`;
+  location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(f.get("subject"))}&body=${encodeURIComponent(`${f.get("message")}\n\n— ${f.get("name")}`)}`;
 });
 
 $("#year").textContent = new Date().getFullYear();
 
-/* ---------- Fond : réseau de neurones animé ---------- */
-(function neural() {
-  const cv = $("#neural"), ctx = cv.getContext("2d");
-  let W, H, pts = [], mouse = { x: -999, y: -999 }, raf;
-  const DPR = Math.min(devicePixelRatio || 1, 2);
-  const colors = ["139,92,246", "236,72,153", "34,211,238", "249,115,22"];
-
-  function resize() {
-    W = cv.width = innerWidth * DPR; H = cv.height = innerHeight * DPR;
-    cv.style.width = innerWidth + "px"; cv.style.height = innerHeight + "px";
-    const n = Math.min(90, Math.floor((innerWidth * innerHeight) / 16000));
-    pts = Array.from({ length: n }, () => ({
-      x: Math.random() * W, y: Math.random() * H,
-      vx: (Math.random() - 0.5) * 0.35 * DPR, vy: (Math.random() - 0.5) * 0.35 * DPR,
-      r: (Math.random() * 1.6 + 0.8) * DPR, c: colors[Math.floor(Math.random() * colors.length)],
-    }));
-  }
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    const light = root.dataset.theme === "light";
-    const max = 140 * DPR;
-    for (let i = 0; i < pts.length; i++) {
-      const p = pts[i];
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > W) p.vx *= -1;
-      if (p.y < 0 || p.y > H) p.vy *= -1;
-      for (let j = i + 1; j < pts.length; j++) {
-        const q = pts[j], d = Math.hypot(p.x - q.x, p.y - q.y);
-        if (d < max) {
-          ctx.strokeStyle = `rgba(${p.c},${(1 - d / max) * (light ? 0.22 : 0.28)})`;
-          ctx.lineWidth = DPR * 0.8;
-          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
-        }
-      }
-      const dm = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-      if (dm < max * 1.4) {
-        ctx.strokeStyle = `rgba(236,72,153,${(1 - dm / (max * 1.4)) * 0.55})`;
-        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-      }
-      ctx.fillStyle = `rgba(${p.c},${light ? 0.55 : 0.85})`;
-      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
-    }
-    if (!reduceMotion) raf = requestAnimationFrame(draw);
-  }
-  addEventListener("resize", () => { cancelAnimationFrame(raf); resize(); draw(); });
-  addEventListener("pointermove", (e) => { mouse.x = e.clientX * DPR; mouse.y = e.clientY * DPR; }, { passive: true });
-  document.addEventListener("visibilitychange", () => {
-    cancelAnimationFrame(raf);
-    if (!document.hidden) draw();
-  });
-  resize(); draw();
-})();
-
 /* ---------- Initialisation ---------- */
-renderMarquee();
 applyLang(false);
+$$(".reveal").forEach((el) => io.observe(el));
+bindCursorTargets();
